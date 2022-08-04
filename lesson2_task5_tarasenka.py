@@ -3,16 +3,17 @@ rating = [10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
 new_item = input("insert your result ")
 
 
-def check_user_input(new_item):  # хочу проверить, корректно ли введены данные, но что-то пошло не так. Хэлп
+def check_user_input(new_item):
     try:
-        new_item = float(new_item)
         print("Input is a number")
+        return float(new_item)
     except ValueError:
         print("Input is not a number")
-        return
+        return 0
 
 
 check_user_input(new_item)
+
 
 new_item = float(new_item)
 if rating[-1] >= new_item:
